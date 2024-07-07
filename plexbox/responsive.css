@@ -1,0 +1,22 @@
+/* PC, Tablet */
+@media (min-width: 740px) {
+    .feature-layout {
+    }
+}
+/* moblie */
+@media (max-width: 740px) {
+    .the-end,
+    .column-layout,
+    .feature-layout {
+        flex-direction: column; 
+    }
+    .main-column{
+        order: 1;
+    }
+    .sidebar-one{
+        order: 2;
+    }
+    .sidebar-two{
+        order: 3;
+    }
+}

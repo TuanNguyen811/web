@@ -1,0 +1,481 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*
+1. vị trí
+2. kích thước
+3. màu sắc
+4. kiểu dáng
+*/
+
+.clear{
+    clear: both;
+}
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-full{
+    width: 100%;
+}
+.col-half{
+    width: calc(100%/2);
+}
+.col-third{
+    width: calc(100%/3);
+}
+.col-four{
+    width: calc(100%/4);
+}
+.mt-8{
+    margin-top: 8px;
+}
+.mt-16{
+    margin-top: 16px;
+}
+.text-center{
+    text-align: center !important;
+}
+.white-coler{
+    color: white !important;
+}
+/* header */
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header{
+    height: 45px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: green;
+    z-index: 2;
+}
+#namePage{
+    display:inline-block;
+    padding: 0 24px;
+
+}
+#namePage a{
+    color: white;
+    line-height: 45px;
+    font-size: 20px;
+    text-decoration: none;
+}
+#namePage a:hover{
+    color: rgba(255, 255, 255, 0.758);
+}
+#nav .nav-crrow-down{
+    font-size: 12px;
+}
+#nav, .subNav{
+    list-style-type: none;
+    display: inline-block;
+}
+#nav{
+    top: 0;
+}
+#nav li a{
+    text-decoration: none;
+
+}
+#nav > li{
+    display: inline-block;
+    position: relative;   
+}
+#nav .subNav li:hover a,
+#nav > li:hover > a{
+    color: green;
+    background-color: rgb(234, 234, 234);
+}
+#nav li:hover .subNav{
+    display: block;
+}
+
+#nav > li > a{
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 45px;
+    color: white;
+    padding: 0 12px;
+}
+
+#nav .subNav{
+    min-width: 120px;
+    display: none;
+    top: 100%;
+    left: 0;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#nav .subNav li{
+    background-color: white;
+}
+#nav .subNav li a{
+    padding: 2px 4px;
+    display: block;
+    line-height: 28px;
+    color: green;
+}
+.search-btn{
+    display: inline-block;
+    float: right;
+    line-height: 45px;
+    padding: 0 16px;
+}
+.menu-icon-btn{
+    display: none;
+}
+.search-btn:hover{
+    background-color: brown;
+    cursor: pointer;
+}
+.search-icon{
+    color: white;
+}
+.menu-icon{
+
+}
+#slider{
+    position: relative;
+    margin-top: 45px;
+    padding-top: 50%;
+    background: url('D:/web/DuAn/KienThucNongNghiep/assets/img/R.jpg') top center/ cover no-repeat;
+}
+#slider .text-content{
+    bottom: 16px;
+    position: absolute;
+    color: white;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+#slider .text-header{
+    margin: 10px;
+    display: inline-block;
+}
+#slider .icon-next-page:hover,
+#slider .text-header:hover{
+    color: rgba(255, 255, 255, 0.758);;
+    cursor: pointer;
+}
+#slider .content{
+    width: 100%;
+}
+#slider .icon-next-page{
+    margin-top: 25px;
+    display: inline-block;
+    font-size: 25px;
+}
+/* content */
+#content{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#content .text-heading{
+    font-size: 24px;
+    color: green;
+    margin-top:16px ;
+}
+#content .text-content{
+    margin-top: 8px;
+    text-align: justify;
+    line-height: 1.6;
+}
+#content .see-more{
+    text-decoration: none;
+    color: green;
+}
+/* introduce */
+#content .tenAnh{
+    display: block;
+    color: white;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+#content .anh{
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 4px;}
+
+#anhGioiThieu2{
+    width: 800px;
+    max-width: 100%;
+    margin-top:16px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+#sliderGioiThieu2{
+    padding: 24px 0;
+    width:100%;
+    background-color: rgb(0, 128, 0);
+}
+#anhGioiThieu2 .members-item{
+    float: left;
+    width: calc(100%/3);
+    text-align: center;
+}
+#anhGioiThieu2 .name{
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+#anhGioiThieu2 .img{
+    margin-top: 15px;
+    width: 80%;
+    border-radius: 4px;
+}
+#anhGioiThieu2 h2{
+    text-align: center;
+    color: white;
+}
+/* shop product */
+#product{
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 15px 8px 16px;
+    margin-bottom: 34px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#product .header{
+    text-align: center;
+    font-size: 34px;
+    color: green;
+}
+#product .list{
+    margin-top: 34px;
+}
+
+#product .item img{
+    width: 100%;
+    display: block;
+}
+
+#product .item img:hover,
+#product .item .place-buy-btn:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+#product .item .body{
+    background-color:aliceblue;
+    padding: 16px;
+}
+#product .item .name-product{
+    text-align: center;
+    font-size: 23px;
+    color: green;
+}
+#product .item .describe{
+    margin-top: 24px;
+    text-align: justify;
+}
+#product .item .place-buy-btn{
+    width: 100%;
+    margin-top: 8px;
+    text-decoration: none;
+    background-color: rgb(0, 128, 0);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    display: inline-block;
+}
+.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; 
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 2;
+}
+.modal.open{
+    display: flex;
+}
+.modal-container{
+    background-color: white;
+    position: relative;
+    width: 800px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    animation: modalFaceIn ease 0.5s;
+}
+.modal-header{
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    height: 64px;
+    text-align: center;
+    display: flex;
+    align-content: stretch;
+    align-items: center;
+    justify-content: center;
+}
+.modal-bag{
+    margin-right: 8px;
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 16px;
+}
+.modal-close:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+.modal-body{
+    padding: 12px;
+}
+.modal-body h2{
+    padding-bottom: 8px;
+}
+.madal-info-group{
+    width: 100%;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+.madal-info-group #modal-name{
+    width: 50%;
+    float: left;
+}
+.madal-info-group #modal-phone{
+    width: 50%;
+    float: left;
+}
+.madal-info-group .modal-input{
+    width: 100%;
+    margin-bottom: 8px;
+}
+.madal-info-group input{
+    padding: 2px 4px;
+}
+.modal-buy:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.modal-buy {
+    background-color: green;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 9px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+/* contact */
+.contact {
+    width: 800px;
+    max-width: 100%;
+    padding: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contact-content{
+
+}
+.contact-info{
+
+}
+.contact-info i {
+    width: 26px;
+    display: inline-block;
+}
+.contact-info h3 {
+    text-transform: uppercase;
+    color: green;
+}
+.contact-form{
+
+}
+.contact-form h3{
+    text-transform: uppercase;
+    color: white;
+}
+.contact .form-control{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    font: small-caption;
+}
+.contact textarea{
+    max-width: 100%;
+    min-width: 100%;
+}
+.contact-form {
+    background-color: green;
+    padding: 12px 12px;
+    border-radius: 8px;
+}
+.contact-submit-btn {
+    background-color: green;
+    display: block;
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+.contact-submit-btn:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* footer */
+.footer {
+    background-color: green;
+    text-align: center;
+    padding: 35px 10px;
+    margin-top: 34px;
+}
+.footer a{
+    color: rgba(253, 253, 253, 0.612);
+    text-decoration: none;
+    font-size: 34px;
+    display: inline-block;
+}
+.footer a:hover{
+    opacity: 0.5;
+}
+.footer p{
+    color: rgba(253, 253, 253, 0.612);
+    margin-top: 8px;
+}
+@keyframes modalFaceIn {
+    from{
+        opacity: 0;
+        transform: translateY(-130px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
